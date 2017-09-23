@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pie.scss">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ...then load our CSS file that can overwrite any of the styles. -->
+  </head>
+
+  <body>
+    <div id="app">
+<link rel="stylesheet" v-bind:href="current_template.value">
+
+    <main role="main" v-bind:class="current_template.name">
+       
+
+
+      <nav>
+
+      <img src="./img/logo.png" class="logo">
+
+        <ul>
+          <li>         
+            <template v-for="template in templates">
+           
+            <button v-on:click="setTemplate(template.id)" style="background-image: url(./img/bulp.png); background-size: cover; width: 30px; background-color: white; border-style: none; cursor: pointer;">
+             
+            </button>
+
+          </template>
+          </li>
+
+        <li><a href="#"><h3>Login<h3></a></li>
+                
+
+        </ul>
+
+    
+  </nav>
+    
+
+<div class="ctop">
+
+<div class="wrapper">
+  
+  <div class="cols">
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container">
+          <div class="front" style="background-image: url(./img/inbox.png); background-color: #ff6f69">
+            <div class="inner">
+              
+              <span></span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+             <h1>Inbox</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container">
+         <div class="front" style="background-image: url(./img/friends.png); background-color: #ffcc5c">
+            <div class="inner">
+              
+              <span></span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <h1>Friends</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container">
+          <div class="front" style="background-image: url(./img/time.png); background-color: #ffeead">
+            <div class="inner">
+              
+              <span></span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <h1>Time</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container">
+          <div class="front" style="background-image: url(./img/weather.png); background-color: #96ceb4">
+            <div class="inner">
+              
+              <span></span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <h1>Weather</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+     
+      </div>
+    </div>
+ </div>
+
+</div>
+<div class="test2">
+
+<div class="user">
+      
+  <img class="icon" src="./img/user.png">
+    
+      <form>
+        First name:<br>
+        <input type="text" name="firstname">
+        <br><br>
+        Last name:<br>
+        <input type="text" name="lastname">
+         <br><br>
+        Email:<br>
+        <input type="text" name="lastname">
+    </form>
+
+</div>
+
+
+<div class="barcontainer">
+
+
+
+<h1 class="testin">BAR</h1>
+<p>Insert a number</p>
+
+
+  <div class="inputfields">
+    <input type="text" value="0" class="bar_val" id="bar1_val" />
+    <input type="text" value="0" class="bar_val" id="bar2_val" />
+    <input type="text" value="0" class="bar_val" id="bar3_val" />
+    <input type="text" value="0" class="bar_val" id="bar4_val" />
+    <input type="text" value="0" class="bar_val" id="bar5_val" />
+    <input type="text" value="0" class="bar_val" id="bar6_val" />
+  </div>
+  
+  <div id="bar_graph_wrapper">
+      <div id="bar1" class="bars"></div>
+      <div id="bar2" class="bars"></div>
+      <div id="bar3" class="bars"></div>
+      <div id="bar4" class="bars"></div>
+      <div id="bar5" class="bars"></div>
+      <div id="bar6" class="bars"></div>
+  </div>
+
+</div>
+
+
+
+
+
+</div>
+
+<div class="pie">
+
+<div id=main-container>
+  <div id=chart-controls>
+    <form id=nbForm>
+      <ul id="menu">
+        <li>
+         
+          <h4>Select Number of Chart Segments</h4></li>
+        <li>
+          <div class="range-slider">
+            <input id=nbSliders class="input-range" type="range" value="1" min="1" max="10">
+            <span class="range-value"></span>
+          </div>
+          <br>
+        </li>
+        <li>
+          <!--
+            <button id=nbFormSubmit type="button" class="btn btn-success">Create Segments</button>
+          -->
+        </li>
+      </ul>
+
+    </form>
+    <table id=rangebox>
+
+      <tbody>
+       
+         
+      </tbody>
+    </table>
+    </div>
+   
+    
+    <div id=pie></div>
+  </div> <div id="test3">
+  </div>  
+
+
+
+
+
+<div class="clearfix"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0-rc.1/Chart.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-meta@1.2.0/lib/vue-meta.js"></script>
+   
+    <script src='js/main.js'></script>
+    </main>
+  </body>
+</html>
