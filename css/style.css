@@ -2,17 +2,20 @@
 /*# sourceMappingURL=application.css.map */
 
 body {
-  margin: 0 auto; }
+  margin: 0 auto; 
+font-family: 'Roboto', sans-serif;}
 
 h1 {
     font-weight: 400;
     text-align: center;
     color: black;
     margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
    }
 
 h3 {
 margin-right: 15px;
+font-family: 'Roboto', sans-serif;
 }
 
   .testin {
